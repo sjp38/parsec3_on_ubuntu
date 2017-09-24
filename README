@@ -1,12 +1,17 @@
-This repository is a toolbox for parsec 3.0 benchmark installation and execution on Ubuntu Xenial (16.04).
+This repository is a toolbox for parsec 3.0 benchmark installation and
+execution on Ubuntu Xenial (16.04).
 
 
 Quick Tutorial
 ==============
 
+Following is a quick tutorial for use of the tools in this toolbox.  Each
+example command assumes that your current working directory(`cwd`) is this
+repository.
+
 Get source code of parsec 3.0
 ```
-$ getsrc.sh
+$ ./getsrc.sh
 ```
 
 Modify source code to be successfully built on Ubuntu Xenial
