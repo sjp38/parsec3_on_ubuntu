@@ -1,0 +1,36 @@
+This repository is a toolbox for parsec 3.0 benchmark installation and execution on Ubuntu Xenial (16.04).
+
+
+Quick Tutorial
+==============
+
+Get source code of parsec 3.0
+```
+$ getsrc.sh
+```
+
+Modify source code to be successfully built on Ubuntu Xenial
+```
+$ ./patch-for-ubuntu16.04.sh
+```
+
+Install dependent packages
+```
+$ ./install_dep.sh
+```
+
+Build parsec 3.0 benchmark
+```
+$ ./build.sh
+```
+
+Run canneal package of parsec 3.0
+```
+$ ./runparsec.sh canneal
+```
+
+
+Author
+======
+
+SeongJae Park <sj38.park@gmail.com>
