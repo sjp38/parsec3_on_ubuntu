@@ -16,7 +16,7 @@ $ ./getsrc.sh
 
 Modify source code to be successfully built on Ubuntu Xenial
 ```
-$ ./patch-for-ubuntu16.04.sh
+$ ./patch-for-ubuntu-xenial.sh
 ```
 
 Install dependent packages
