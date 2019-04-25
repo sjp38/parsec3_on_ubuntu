@@ -1,5 +1,5 @@
 This repository is a toolbox for parsec 3.0 benchmark installation and
-execution on Ubuntu Xenial (16.04).
+execution on Ubuntu Xenial (16.04) and Bionic (18.04).
 
 
 Quick Tutorial
@@ -14,14 +14,22 @@ Get source code of parsec 3.0
 $ ./getsrc.sh
 ```
 
-Modify source code to be successfully built on Ubuntu Xenial
+Modify source code to be successfully built on Ubuntu Xenial or Bionic
 ```
 $ ./patch-for-ubuntu-xenial.sh
+```
+or
+```
+$ ./patch-for-ubuntu-bionic.sh
 ```
 
 Install dependent packages
 ```
-$ ./install_dep.sh
+$ ./install_dep-xenial.sh
+```
+or
+```
+$ ./install_dep-bionic.sh
 ```
 
 Build parsec 3.0 benchmark
@@ -39,3 +47,4 @@ Author
 ======
 
 SeongJae Park <sj38.park@gmail.com>
+Yunjae Lee <lyj7694@gmail.com>
