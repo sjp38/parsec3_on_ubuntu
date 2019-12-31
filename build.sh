@@ -9,7 +9,13 @@ SRCDIR=./parsec-3.0
 pushd $SRCDIR
 
 source ./env.sh
-parsecmgmt -a build
+
+if [ $# -gt 0 ]
+then
+	parsecmgmt -a build -p $1
+else
+	parsecmgmt -a build
+fi
 
 popd
 
