@@ -42,6 +42,29 @@ Run canneal package of parsec 3.0
 $ ./run.sh canneal
 ```
 
+
+SPLASH-2x
+=======
+
+Parsec 3.0 includes SPLASH-2X benchmark suite.  You can also build and run it
+using this tool.  For build of it, simply run the build script with an
+additional argument, `splash2x`:
+```
+$ ./build.sh splash2x
+```
+
+You can also build only a specific package as below:
+```
+$ ./build.sh splash2x.water_nsquared
+```
+
+After that, to run a benchmark package of SPLASH-2X, use the `run.sh` but
+prefix `splash2x` to the package name:
+```
+$ ./run.sh splash2x.water_nsquared
+```
+
+
 History
 =======
 
