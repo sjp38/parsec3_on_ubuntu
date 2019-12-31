@@ -42,6 +42,15 @@ Run canneal package of parsec 3.0
 $ ./run.sh canneal
 ```
 
+History
+=======
+
+This is a fork of the
+[parsec_on_ubuntu_xenial](https://github.com/sjp38/parsec_on_ubuntu_xenial),
+which was made to support Ubuntu Xenial (16.04) only.  Yunjae has made it to
+additionally support Bionic (18.04), and as a result this fork has made.  Note
+that the previous version (parsec_on_ubuntu_xenial) is not deprecated.
+
 
 Author
 ======
