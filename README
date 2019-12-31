@@ -1,5 +1,5 @@
 This repository is a toolbox for parsec 3.0 benchmark installation and
-execution on Ubuntu Xenial (16.04) and Bionic (18.04).
+execution on Ubuntu.  Currently, it supports Xenial (16.04) and Bionic (18.04).
 
 
 Quick Tutorial
