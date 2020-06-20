@@ -1,5 +1,5 @@
-This repository is a toolbox for parsec 3.0 benchmark installation and
-execution on Ubuntu.  Currently, it supports Xenial (16.04) and Bionic (18.04).
+This is a toolbox for the parsec 3.0 benchmark installation and execution on
+Ubuntu.  Currently, it supports Xenial (16.04) and Bionic (18.04).
 
 
 Getting Started
@@ -21,25 +21,22 @@ canneal`).
 
 
 SPLASH-2x
-=======
+=========
 
 Parsec 3.0 includes SPLASH-2X benchmark suite.  You can also build and run it
-using this tool.  For build of it, simply run the build script with an
-additional argument, `splash2x`:
-```
-$ ./build.sh splash2x
-```
+using the tools.  For build, simply run the build script with an additional
+argument, `splash2x`:
 
-You can also build only a specific package as below:
-```
-$ ./build.sh splash2x.water_nsquared
-```
+    $ ./build.sh splash2x
+
+Build of specific splash2x package is also available:
+
+    $ ./build.sh splash2x.water_nsquared
 
 After that, to run a benchmark package of SPLASH-2X, use the `run.sh` but
-prefix `splash2x` to the package name:
-```
-$ ./run.sh splash2x.water_nsquared
-```
+prefix `splash2x.` to the package name:
+
+    $ ./run.sh splash2x.water_nsquared
 
 
 History
