@@ -2,37 +2,22 @@ This repository is a toolbox for parsec 3.0 benchmark installation and
 execution on Ubuntu.  Currently, it supports Xenial (16.04) and Bionic (18.04).
 
 
-Quick Tutorial
-==============
+Getting Started
+===============
 
-Following is a quick tutorial for use of the tools in this toolbox.  Each
-example command assumes that your current working directory(`cwd`) is this
-repository.
+Open terminal, move to this directory, and follow below scripts.
 
-Get source code of parsec 3.0
-```
-$ ./getsrc.sh
-```
+    $ ./getsrc.sh
+    $ ./patch.sh
+    $ ./install_deps.sh
+    $ ./build.sh
+    $ ./run.sh canneal
 
-Modify source code to be successfully built on Ubuntu Xenial or Bionic
-```
-$ ./patch.sh
-```
-
-Install dependant packages
-```
-$ ./install_deps.sh
-```
-
-Build parsec 3.0 benchmark
-```
-$ ./build.sh
-```
-
-Run canneal package of parsec 3.0
-```
-$ ./run.sh canneal
-```
+Each of the commands fetches source code of parsec 3.0 (`getsrc.sh`), modifies
+the source code to be successfully built on Ubuntu (`patch.sh`), installs
+dependent packages (`install_deps.sh`), build the parsec 3.0 benchmark
+(`build.sh`), and finally runs canneal package of the benchmark (`run.sh
+canneal`).
 
 
 SPLASH-2x
