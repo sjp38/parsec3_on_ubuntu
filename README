@@ -19,13 +19,9 @@ Modify source code to be successfully built on Ubuntu Xenial or Bionic
 $ ./patch.sh
 ```
 
-Install dependent packages
+Install dependant packages
 ```
-$ ./install_dep-xenial.sh
-```
-or
-```
-$ ./install_dep-bionic.sh
+$ ./install_deps.sh
 ```
 
 Build parsec 3.0 benchmark
