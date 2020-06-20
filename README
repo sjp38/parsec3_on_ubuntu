@@ -16,11 +16,7 @@ $ ./getsrc.sh
 
 Modify source code to be successfully built on Ubuntu Xenial or Bionic
 ```
-$ ./patch-for-ubuntu-xenial.sh
-```
-or
-```
-$ ./patch-for-ubuntu-bionic.sh
+$ ./patch.sh
 ```
 
 Install dependent packages

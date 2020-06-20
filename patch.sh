@@ -14,7 +14,13 @@ fi
 
 pushd $SRCDIR
 patch -p1 < ../for-ubuntu16.04.patch
-patch -p1 < ../for-ubuntu18.04.patch
+
+if [ "$(cat /etc/issue)" = "Ubuntu 18.04.4 LTS \n \l" ];
+then
+	echo "This system seems Ubuntu 18.04"
+	patch -p1 < ../for-ubuntu18.04.patch
+fi
+
 popd
 
 popd
