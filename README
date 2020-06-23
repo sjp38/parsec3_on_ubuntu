@@ -5,33 +5,37 @@ Ubuntu.  Currently, it supports Xenial (16.04) and Bionic (18.04).
 Getting Started
 ===============
 
-Open terminal, move to this directory, and follow below scripts.
+Open terminal, move to this directory, and follow below scripts:
 
-    $ ./getsrc.sh
-    $ ./patch.sh
-    $ ./install_deps.sh
     $ ./build.sh
     $ ./run.sh canneal
 
-Each of the commands fetches source code of parsec 3.0 (`getsrc.sh`), modifies
-the source code to be successfully built on Ubuntu (`patch.sh`), installs
-dependent packages (`install_deps.sh`), build the parsec 3.0 benchmark
-(`build.sh`), and finally runs canneal package of the benchmark (`run.sh
-canneal`).
+The first command (`build.sh`) will get source code of parsec 3.0, modifies the
+source code to be successfully built on Ubuntu, installs dependent packages,
+and build the parsec 3.0 benchmark packages.  Then, the second command runs
+canneal package of the benchmark (`run.sh canneal`).
+
+Each of the four steps of the `build.sh` can be done via below 4 separate
+scripts, respectively:
+
+    $ ./_getsrc.sh
+    $ ./_patch.sh
+    $ ./_install_deps.sh
+    $ ./_build.sh
 
 
 SPLASH-2x
 =========
 
 Parsec 3.0 includes SPLASH-2X benchmark suite.  You can also build and run it
-using the tools.  For build, simply run the build script with an additional
-argument, `splash2x`:
+using the tools.  For build, simply run the internal build script with an
+additional argument, `splash2x`:
 
-    $ ./build.sh splash2x
+    $ ./_build.sh splash2x
 
 Build of specific splash2x package is also available:
 
-    $ ./build.sh splash2x.water_nsquared
+    $ ./_build.sh splash2x.water_nsquared
 
 After that, to run a benchmark package of SPLASH-2X, use the `run.sh` but
 prefix `splash2x.` to the package name:
