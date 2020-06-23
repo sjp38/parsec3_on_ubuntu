@@ -1,22 +1,9 @@
 #!/bin/bash
 
-BINDIR=`dirname $0`
+BINDIR=$(dirname $0)
+cd "$BINDIR"
 
-pushd $BINDIR
-
-SRCDIR=./parsec-3.0
-
-pushd $SRCDIR
-
-source ./env.sh
-
-if [ $# -gt 0 ]
-then
-	parsecmgmt -a build -p $1
-else
-	parsecmgmt -a build
-fi
-
-popd
-
-popd
+./_install_deps.sh
+./_getsrc.sh
+./_patch.sh
+./_build.sh $1
