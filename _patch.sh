@@ -1,8 +1,8 @@
 #!/bin/bash
 
-BINDIR=`dirname $0`
+BINDIR=$(dirname "$0")
 
-pushd $BINDIR
+pushd "$BINDIR"
 
 SRCDIR=./parsec-3.0
 
@@ -12,7 +12,7 @@ then
 	exit 1
 fi
 
-pushd $SRCDIR
+pushd "$SRCDIR"
 patch -p1 < ../for-ubuntu16.04.patch
 
 if [ "$(cat /etc/issue)" = "Ubuntu 18.04.4 LTS \n \l" ];
