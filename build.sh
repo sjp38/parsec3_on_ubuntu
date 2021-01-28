@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BINDIR=$(dirname $0)
-cd "$BINDIR"
+bindir=$(dirname $0)
+cd "$bindir"
 
 ./_install_deps.sh
 ./_getsrc.sh

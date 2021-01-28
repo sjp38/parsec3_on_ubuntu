@@ -1,12 +1,12 @@
 #!/bin/bash
 
-BINDIR=$(dirname "$0")
+bindir=$(dirname "$0")
 
-pushd "$BINDIR"
+pushd "$bindir"
 
-SRCDIR=./parsec-3.0
+srcdir=./parsec-3.0
 
-pushd "$SRCDIR"
+pushd "$srcdir"
 
 source ./env.sh
 

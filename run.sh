@@ -8,12 +8,12 @@ then
 	exit 1
 fi
 
-CALLEE_DIR=$(dirname "$0")
-pushd "$CALLEE_DIR" > /dev/null
+bindir=$(dirname "$0")
+pushd "$bindir" > /dev/null
 
-PARSEC_DIR=parsec-3.0
+parsec_dir=parsec-3.0
 
-pushd "$PARSEC_DIR" > /dev/null
+pushd "$parsec_dir" > /dev/null
 source ./env.sh
 parsecmgmt -p "$1" -a run -i native -n 1
 popd > /dev/null
