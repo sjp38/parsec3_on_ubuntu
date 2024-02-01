@@ -1,16 +1,17 @@
-From a882ad63144fe51a38219ddd487e2971c2fd41a2 Mon Sep 17 00:00:00 2001
+From d6891a860f71c04fe03c4e137ab777cac0e164bc Mon Sep 17 00:00:00 2001
 From: SeongJae Park <sj38.park@gmail.com>
-Date: Wed, 31 Jan 2024 18:44:44 -0800
-Subject: [PATCH] Fix facesim build
+Date: Wed, 31 Jan 2024 21:36:41 -0800
+Subject: [PATCH] Fix facesim and x264 build
 
 Signed-off-by: SeongJae Park <sj38.park@gmail.com>
 ---
  .../facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp  | 2 +-
  .../facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h    | 4 ++--
- 2 files changed, 3 insertions(+), 3 deletions(-)
+ pkgs/apps/x264/parsec/gcc-pthreads.bldconf                    | 2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp b/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp
-index 98052a0e..b1167f3c 100644
+index 98052a0..b1167f3 100644
 --- a/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp
 +++ b/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp
 @@ -98,7 +98,7 @@ int Compare_File_Times_Ignoring_Compression_Suffix (const std::string& filename1
@@ -23,7 +24,7 @@ index 98052a0e..b1167f3c 100644
  
  bool Create_Directory (const std::string& dirname, bool exit_on_fail)
 diff --git a/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h b/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h
-index 871a33fe..717887b2 100644
+index 871a33f..717887b 100644
 --- a/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h
 +++ b/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h
 @@ -70,7 +70,7 @@ inline bool File_Is_Compressed (const std::string& filename)
@@ -44,6 +45,17 @@ index 871a33fe..717887b2 100644
  }
  
  inline bool File_Writable (const std::string& filename)
+diff --git a/pkgs/apps/x264/parsec/gcc-pthreads.bldconf b/pkgs/apps/x264/parsec/gcc-pthreads.bldconf
+index 7bf67b0..8286f5a 100644
+--- a/pkgs/apps/x264/parsec/gcc-pthreads.bldconf
++++ b/pkgs/apps/x264/parsec/gcc-pthreads.bldconf
+@@ -35,5 +35,5 @@ build_env="PATH=\"${PARSECDIR}/pkgs/tools/yasm/inst/${PARSECPLAT}/bin:${PATH}\""
+ build_inplace="TRUE"
+ 
+ # Arguments to pass to the configure script, if it exists
+-build_conf="--enable-pthread --extra-asflags=\"${ASFLAGS}\" --extra-cflags=\"${CFLAGS}\" --extra-ldflags=\"${LDFLAGS} ${LIBS}\""
++build_conf="--enable-pic --enable-pthread --extra-asflags=\"${ASFLAGS}\" --extra-cflags=\"${CFLAGS}\" --extra-ldflags=\"${LDFLAGS} ${LIBS}\""
+ 
 -- 
 2.39.2
 
