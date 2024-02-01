@@ -13,6 +13,15 @@ then
 fi
 
 pushd "$srcdir"
+
+if grep --quiet "Debian GNU/Linux 12 " --quiet /etc/issue
+then
+	patch -p1 < ../for-debian12.patch
+	popd
+	popd
+	exit 0
+fi
+
 patch -p1 < ../for-ubuntu16.04.patch
 
 if [ "$(cat /etc/issue)" = "Ubuntu 18.04.4 LTS \n \l" ];

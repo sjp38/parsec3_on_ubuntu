@@ -1,0 +1,49 @@
+From a882ad63144fe51a38219ddd487e2971c2fd41a2 Mon Sep 17 00:00:00 2001
+From: SeongJae Park <sj38.park@gmail.com>
+Date: Wed, 31 Jan 2024 18:44:44 -0800
+Subject: [PATCH] Fix facesim build
+
+Signed-off-by: SeongJae Park <sj38.park@gmail.com>
+---
+ .../facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp  | 2 +-
+ .../facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h    | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp b/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp
+index 98052a0e..b1167f3c 100644
+--- a/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp
++++ b/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.cpp
+@@ -98,7 +98,7 @@ int Compare_File_Times_Ignoring_Compression_Suffix (const std::string& filename1
+ 
+ bool Directory_Exists (const std::string& dirname)
+ {
+-	return std::ifstream (dirname.c_str()) != 0;
++	return (bool)std::ifstream (dirname.c_str());
+ }
+ 
+ bool Create_Directory (const std::string& dirname, bool exit_on_fail)
+diff --git a/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h b/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h
+index 871a33fe..717887b2 100644
+--- a/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h
++++ b/pkgs/apps/facesim/src/Public_Library/Read_Write/FILE_UTILITIES.h
+@@ -70,7 +70,7 @@ inline bool File_Is_Compressed (const std::string& filename)
+ 
+ inline bool File_Exists_Ignoring_Compression_Suffix (const std::string& filename)
+ {
+-	return std::ifstream (filename.c_str()) != 0;
++	return (bool)std::ifstream (filename.c_str());
+ }
+ 
+ inline bool File_Exists (const std::string& filename)
+@@ -80,7 +80,7 @@ inline bool File_Exists (const std::string& filename)
+ 
+ inline bool File_Writable_Ignoring_Compression_Suffix (const std::string& filename)
+ {
+-	return std::ofstream (filename.c_str()) != 0;
++	return (bool)std::ofstream (filename.c_str());
+ }
+ 
+ inline bool File_Writable (const std::string& filename)
+-- 
+2.39.2
+
