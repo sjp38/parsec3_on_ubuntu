@@ -22,5 +22,5 @@ fi
 
 if [ ! -d $srcdir ]
 then
-	tar zxvf parsec-3.0.tar.gz
+	tar zxvf "$tarball"
 fi
