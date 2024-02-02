@@ -11,7 +11,7 @@ fi
 # Assume the user somehow prepared the tarball before.
 if [ ! -f "$tarball" ]
 then
-	tarball="$(dirname "$0")../parsec-3.0.tar.gz"
+	tarball="$(dirname "$0")/../parsec-3.0.tar.gz"
 fi
 
 if [ ! -f "$tarball" ]
