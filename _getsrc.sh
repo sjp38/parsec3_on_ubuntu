@@ -8,6 +8,12 @@ then
 	wget http://parsec.cs.princeton.edu/download/3.0/parsec-3.0.tar.gz
 fi
 
+# Assume the user somehow prepared the tarball before.
+if [ ! -f "$tarball" ]
+then
+	tarball="$(dirname "$0")../parsec-3.0.tar.gz"
+fi
+
 if [ ! -f "$tarball" ]
 then
 	echo "fetching tarball failed"
